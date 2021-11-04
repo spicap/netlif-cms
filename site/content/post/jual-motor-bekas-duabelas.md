@@ -1,9 +1,10 @@
 ---
 title: Contoh Post Jual Motor Bekas Dua Belas
 date: 2021-11-03T15:12:10.000Z
-summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec est sem, pharetra ac malesuada eu, viverra a nulla.
-image: /img/image-placeholder.png
-merek: "Honda"
+summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec est sem,
+  pharetra ac malesuada eu, viverra a nulla.
+image: img/image-placeholder-dua.png
+merek: Honda
 tahun: "2019"
 km: "45000"
 harga: "11000000"
