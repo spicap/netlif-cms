@@ -19,3 +19,4 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Km", name: "km", widget: "string"}
       - {label: "Harga", name: "harga", widget: "string"}
       - {label: "Terjual", name: "sold", widget: "boolean", default: false}
+      - {label: "Body", name: "body", widget: "markdown"}
