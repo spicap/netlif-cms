@@ -1,12 +1,27 @@
 {{ define "main" }}
 
-{{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle) }}
-
-{{ partial "short-text" .Params.blurb}}
-
-{{ partial "2-up" .Params }}
-
-{{ partial "text-and-image" (dict "heading" .Params.values.heading "text" .Params.values.text "buttonText" "Read more" "buttonLink" "/values") }}
+<div class="bg-grey-2 w-100 center pa3">
+    <div class="mw8 center ph3-ns">
+        <div class="cf ph2-ns">
+            <div class="w-100 pa2 tc center">
+                <h3 class="f3 mb2 b">Kami Beli Motor Apapun Lokasi Jogja</h3>
+                <p class="center">Kondisi hidup atau mati. Tahun tua atau muda. Apapun type, merk, tahun dan kondisi motor Anda, Kami siap beli !</p>
+              </div>
+        </div>
+        <div class="cf ph2-ns center w-70-ns w-60-l mw6 tc">
+          <div class="fl w-100 w-50-ns pa2">
+            <p class="white pv2 w-100 center" style="background-color: green;">Call / WhatsApp / Sms<br><span class="f3">081.2296.3010</span></p>
+          </div>
+          <div class="fl w-100 w-50-ns pa2">
+            <p><a href="https://wa.me/628122963010?text=Saya%20mau%20jual%20motor%2C%20mohon%20bantuannya.%20"><img src="/img/wa-button.png" height="90"></a></p>
+          </div>
+        </div>
+        <div class="cf ph2-ns">
+            <p class="tc center"><strong>Lihat</strong> >> <strong>tawar</strong> >> <strong>deal</strong> >> <strong>bayar cash</strong> >> <strong>gak pake lama</strong></p>
+        </div>
+        
+      </div>
+</div>
 
 {{ partial "blog" . }}
 

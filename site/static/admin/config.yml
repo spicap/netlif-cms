@@ -12,28 +12,10 @@ collections: # A list of collections the CMS should be able to edit
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Intro Blurb", name: "description", widget: "text"}
+      - {label: "Intro", name: "summary", widget: "text"}
       - {label: "Image", name: "image", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
-  - name: "pages"
-    label: "Pages"
-    files:
-      - file: "site/content/_index.md"
-        label: "Home Page"
-        name: "home"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Subtitle, name: subtitle, widget: string}
-          - {label: Image, name: image, widget: image}
-          - {label: "Blurb", name: blurb, widget: object, fields: [
-              {label: "Heading", name: "heading", widget: string},
-              {label: "Text", name: "text", widget: "text"}]}
-          - {label: "Intro", name: intro, widget: object, fields: [
-              {label: "Heading", name: "heading", widget: string},
-              {label: "Text", name: "text", widget: "text"}]}
-          - {label: "Products", name: products, widget: list, fields: [
-              {label: "Image", name: "image", widget: "image"},
-              {label: "Text", name: "text", widget: "text"}]}
-          - {label: "Values", name: "values", widget: "object", fields: [
-              {label: "Heading", name: "heading", widget: string},
-              {label: "Text", name: "text", widget: "text"}]}
+      - {label: "Merek", name: "merek", widget: "string"}
+      - {label: "Tahun", name: "tahun", widget: "string"}
+      - {label: "Km", name: "km", widget: "string"}
+      - {label: "Harga", name: "harga", widget: "string"}
+      - {label: "Terjual", name: "sold", widget: "boolean", default: false}

@@ -3,13 +3,34 @@
   <div class="mw6 center ph3 pv4">
     <h1 class="f2 lh-title b mb3">{{.Title}}</h1>
     <div class="flex justify-between grey-3">
-      <p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
-      <p>Read in {{ .ReadingTime }} minutes</p>
+      {{/* <p>Read in {{ .ReadingTime }} minutes</p> */}}
     </div>
-    <div class="cms mw6">
-      <p>{{ .Description }}</p>
+    <div class="cms mw6 relative">
       {{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}
+      {{/* 
+      {{ if .Params.sold }}
+        <div class="absolute top-0 left-0 z-9999 bg-grey-3 pa1 ph2 white b f3-ns">SOLD</div>
+      {{ end }}
+       */}}
+      <div class="mv2 cf">
+        <div class="fl w-100 w-30-ns mb2">
+          <span class="primary b">Merek</span>: {{ .Params.merek }}<br>
+          <span class="primary b">Tahun</span>: {{ .Params.tahun }}<br>
+          <span class="primary b">Km</span>: <script> km = {{ int .Params.km }}; document.write(km.toLocaleString("id-ID")); </script>
+        </div>
+        <div class="fl w-100 w-70-ns f3 tr-ns">
+          <span class="primary b">Harga</span><br>
+          {{ if .Params.sold }}
+            <span class="strike">Rp. <script> harga = {{ int .Params.harga }}; document.write(harga.toLocaleString("id-ID")); </script></span><span class="b"> SOLD</span>
+          {{ else }}
+            Rp. <script> harga = {{ int .Params.harga }}; document.write(harga.toLocaleString("id-ID")); </script>
+          {{ end }}
+        </div>
+        <a href="https://wa.me/628122963010?text=Saya%20mau%20jual%20motor%2C%20mohon%20bantuannya.%20" class="fl f5 w-100 no-underline white pa2 center tc ma3" style="background-color: green; color: white">Call / WhatsApp / SMS:  <span class="b">081.2296.3010</span> <br>(Klik untuk WA)</a>
+      </div>
       {{ .Content }}
     </div>
+    <p class="f6 grey-3"> Posted {{ .Date.Format "Mon, Jan 2, 2006" }}</p>
+    <a class="f4 primary db mt4" href="/">&larr; Kembali ke beranda</a>
   </div>
 {{ end }}

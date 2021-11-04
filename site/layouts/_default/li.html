@@ -1,6 +1,22 @@
 <a href="{{ .RelPermalink }}" class="no-underline pa3 bg-grey-1 br1 mb2 db raise w-100">
-	<h2 class="f3 b lh-title mb1 primary">{{ .Title }}</h2>
-	<p class="mid-gray lh-title mb2">{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
-	<p class="mb0">{{ .Description }}</p>
-	<p class="link b dib black mb0">Read more →</p>
+	{{ if isset .Params "image" }}
+		{{/* <img src="{{ .Params.image }}" alt="" class="p1">  */}}
+		<div class="aspect-ratio aspect-ratio--4x3 mb3">
+			<div class="aspect-ratio--object cover" style="background:url({{ .Params.image }}) center;"></div>
+		  </div>
+	{{ end }}
+	<h2 class="f4 b lh-title mb3 primary">{{ .Title }}</h2>
+	<p class="f6 grey-3 lh-title mb3">
+		{{ if isset .Params "merek" }}{{ .Params.merek }}{{ end }}
+		{{ if isset .Params "tahun" }} | {{ .Params.tahun }}{{ end }}
+		{{ if isset .Params "km" }} | <script> km = {{ int .Params.km }}; document.write(km.toLocaleString("id-ID")); </script> km{{ end }}
+		{{ if isset .Params "harga" }} <br> Rp. <script> harga = {{ int .Params.harga }}; document.write(harga.toLocaleString("id-ID")); </script>{{ end }}
+	</p>
+	<p class="mb3">{{ .Summary }}</p>
+
+	{{ if .Params.sold }}
+		<div class="absolute top-1 left-1 z-9999 bg-grey-3 pa1 ph2 white b">SOLD</div>
+	{{ end }}
+	
+	<p class="link b dib black mb0">Detail lengkap →</p>
 </a>
