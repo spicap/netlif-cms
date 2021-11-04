@@ -6,9 +6,9 @@ summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec est sem,
 image: img/image-placeholder-dua.png
 merek: Honda
 tahun: "2019"
-km: "45000"
-harga: "11000000"
-sold: false
+km: "65000"
+harga: "11500000"
+sold: true
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec est sem, pharetra ac malesuada eu, viverra a nulla. Sed vitae ante id urna facilisis ultrices quis eget sapien. Pellentesque sit amet imperdiet ex. Quisque commodo suscipit enim nec pharetra. Morbi laoreet fringilla gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel augue ut augue maximus facilisis. Aenean iaculis massa non velit pharetra, nec lobortis augue vulputate. Ut quis pellentesque turpis, vitae elementum est. Proin vel nisi ac felis vestibulum condimentum. In tempus semper tortor eu volutpat. Nullam eget justo eu libero laoreet ultrices.
